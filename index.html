@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+
+  .calculator {
+
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+
+
+  }
+.calculator input{
+    width: 50px;
+    gap: 60px;
+    border: none;
+    outline: none;
+    margin: 20px;
+    background-color: white;
+}
+.calculator .display input{
+    
+    width:22rem;
+}
+form{
+    background-color: blueviolet;
+    position: absolute;
+    
+}
+input{
+    cursor: pointer;
+}
+@media(max-width:428px)
+{
+    .calculator input{
+        margin: 9px;
+    
+    }
+    .calculator .display input{
+        width: 17rem;
+    }
+}
+</style>
+<body>
+    <div class="continer">
+        <div class="calculator">
+            <form>
+                <div class="display"> 
+                    <input type="text" name="dispaly">
+                </div>
+                <div>
+           
+                <input type="text" value="DE" onclick="dispaly.value =dispaly.value =toString().slice(0-1 ) " class="operator" readonly>
+                <input type="text" value="." onclick="dispaly.value +='.' " readonly>
+                <input type="text" value="0" onclick="dispaly.value +='0' " readonly>
+                <input type="text" value="/" onclick="dispaly.value +='/' " readonly>
+            
+                </div>
+                <div>
+                <input type="text" value="7" onclick="dispaly.value +='7' " readonly>
+                <input type="text" value="8" onclick="dispaly.value +='8' "readonly>
+                <input type="text" value="9" onclick="dispaly.value +='9' "readonly>
+                <input type="text" value="*" onclick="dispaly.value +='*' "readonly>
+            
+                </div>
+                <div>
+                <input type="text" value="4" onclick="dispaly.value +='4' "readonly>
+                <input type="text" value="5" onclick="dispaly.value +='5' "readonly>
+                <input type="text" value="6" onclick="dispaly.value +='6' "readonly>
+                <input type="text" value="-" onclick="dispaly.value +='-' "readonly>
+            
+                </div>
+                <div>
+                <input type="text" value="1" onclick="dispaly.value +='1' "readonly>
+                <input type="text" value="2" onclick="dispaly.value +='2' "readonly>
+                <input type="text" value="3" onclick="dispaly.value +='3' "readonly>
+                <input type="text" value="+" onclick="dispaly.value +='+' "readonly>
+            
+                </div>
+                <div>
+              
+
+                <input type="text" value="=" onclick="dispaly.value =eval(dispaly.value)" class="Equal"readonly>
+
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
